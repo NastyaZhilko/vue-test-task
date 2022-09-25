@@ -1,30 +1,46 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+
+  <Header/>
+
+  <Home/>
+  <AboutUs/>
+  <Frameworks/>
+  <Applications/>
+  <ContactUs/>
+
+  <Footer/>
+
 </template>
+<script>
+import Header from '@/components/Header.vue'
+import Home from '@/pages/Home.vue'
+import AboutUs from '@/pages/AboutUs.vue'
+import Applications from '@/pages/Applications.vue'
+import Footer from '@/components/Footer.vue'
+import Frameworks from "@/pages/Frameworks";
+import ContactUs from "@/pages/ContactUs";
 
+export default {
+  components: {Frameworks, Header, Home, AboutUs, Applications, Footer, ContactUs}
+}
+
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-nav {
-  padding: 30px;
+p, h3 {
+  margin: 0;
+  padding: 0;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+body {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'GothicA1-Regular', sans-serif;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

@@ -1,12 +1,12 @@
 <template>
-  <div class="applications-container" id="applications">
+  <div class="frameworks-container" id="frameworks">
     <div class="title">
       <PageTitle :title="title"/>
     </div>
-    <div class="applications-block">
-      <div v-for="framework in frameworks" :key="framework.id">
-        <FrameworkItem :frameTitle="framework.title" :src="framework.image" :frameDescription="framework.description"/>
-      </div>
+    <div class="frameworks-block">
+      <FrameworkItem
+          v-for="framework in frameworks" :key="framework.id"
+          :framework="framework"/>
     </div>
   </div>
 </template>
@@ -16,6 +16,7 @@ import FrameworkItem from '@/components/FrameworkItem.vue'
 import Vue from '@/assets/frameworks-images/vue.png'
 import Angular from '@/assets/frameworks-images/angular.png'
 import React from '@/assets/frameworks-images/react.png'
+
 export default {
   components: {PageTitle, FrameworkItem},
   data() {
@@ -47,3 +48,27 @@ export default {
 }
 
 </script>
+
+<style scoped>
+.frameworks-container {
+  background: #F5F7FA;
+  margin: 0;
+  padding: 45px 120px
+}
+
+.frameworks-block {
+  display: flex;
+  flex-direction: column;
+  gap: 25px
+}
+
+.frameworks-block div:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+</style>

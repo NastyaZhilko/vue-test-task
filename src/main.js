@@ -1,6 +1,14 @@
-import { createApp } from 'vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import {createApp} from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
+import 'bootstrap/dist/js/bootstrap.js'
+import router from "@/router";
+import components from '@/components/shared/UI'
+import './assets/fonts/font.css'
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App)
+components.forEach(component => app.component(component.name, component))
+
+app.use(router)
+    .mount('#app')
+

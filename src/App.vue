@@ -5,6 +5,7 @@
   <Home/>
   <AboutUs/>
   <Frameworks/>
+  <MeetingAndQuestion/>
   <Applications/>
   <ContactUs/>
 
@@ -19,9 +20,10 @@ import Applications from '@/pages/Applications.vue'
 import Footer from '@/components/Footer.vue'
 import Frameworks from "@/pages/Frameworks";
 import ContactUs from "@/pages/ContactUs";
+import MeetingAndQuestion from "@/pages/MeetingAndQuestion";
 
 export default {
-  components: {Frameworks, Header, Home, AboutUs, Applications, Footer, ContactUs}
+  components: {Frameworks, Header, Home, AboutUs, Applications, Footer, ContactUs, MeetingAndQuestion}
 }
 
 </script>

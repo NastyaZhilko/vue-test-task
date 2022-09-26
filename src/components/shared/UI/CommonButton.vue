@@ -30,6 +30,6 @@ button.white {
 }
 
 button:disabled {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 </style>

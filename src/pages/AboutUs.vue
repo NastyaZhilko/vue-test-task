@@ -42,7 +42,6 @@ export default {
 }
 
 .about-us-description {
-  color: #808080;
   display: flex;
   flex-direction: column;
   gap: 16px

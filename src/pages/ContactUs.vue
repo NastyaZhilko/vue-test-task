@@ -1,9 +1,11 @@
 <template>
-  <div class="contact-us-container">
+  <div class="contact-us-container" id="contact">
     <common-dialog v-model:isShow="dialogIsVisible">
       <p class="dialog-message">Data sent successfully!</p>
     </common-dialog>
-    <PageTitle :title="title"/>
+    <div class="title">
+      <PageTitle :title="title"/>
+    </div>
     <form @submit.prevent="submitForm">
       <div class="inputs">
         <div :class="{ error: v$.formData.firstName.$errors.length }">
@@ -36,7 +38,7 @@
             {{ error.$message }}
           </div>
         </div>
-        <div class="form-group" :class="{ error: v$.formData.email.$errors.length }">
+        <div :class="{ error: v$.formData.email.$errors.length }">
           <common-input
               v-model="v$.formData.email.$model"
               label="Email *"
@@ -47,17 +49,17 @@
           </div>
         </div>
 
-        <div class="form-group" :class="{ error: v$.formData.jobTitle.$errors.length }">
+        <div :class="{ error: v$.formData.jobTitle.$errors.length }">
           <common-input
               v-model="v$.formData.jobTitle.$model"
               label="Job Title *"
               placeholder="Enter Job Title"
           />
-          <div class="input-errors" v-for="(error, index) of v$.formData.jobTitle.$errors" :key="index">
+          <div v-for="(error, index) of v$.formData.jobTitle.$errors" :key="index">
             <div class="error-msg">{{ error.$message }}</div>
           </div>
         </div>
-        <div class="form-group" :class="{ error: v$.formData.country.$errors.length }">
+        <div :class="{ error: v$.formData.country.$errors.length }">
           <common-input
               v-model="v$.formData.country.$model"
               label="Country *"
@@ -67,17 +69,17 @@
             <div class="error-msg">{{ error.$message }}</div>
           </div>
         </div>
-        <div class="form-group" :class="{ error: v$.formData.state.$errors.length }">
+        <div :class="{ error: v$.formData.state.$errors.length }">
           <common-input
               v-model="v$.formData.state.$model"
               label="State *"
               placeholder="Enter Your State"
           />
-          <div class="input-errors" v-for="(error, index) of v$.formData.state.$errors" :key="index">
-            <div class="error-msg">{{ error.$message }}</div>
+          <div v-for="(error, index) of v$.formData.state.$errors" :key="index">
+            {{ error.$message }}
           </div>
         </div>
-        <div class="form-group" :class="{ error: v$.formData.zipCode.$errors.length }">
+        <div :class="{ error: v$.formData.zipCode.$errors.length }">
           <common-input
               v-model="v$.formData.zipCode.$model"
               label="Zip code *"
@@ -179,9 +181,11 @@ export default {
 .contact-us-container {
   margin: 0;
   padding: 45px 120px;
+}
+
+.title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .dialog-message {

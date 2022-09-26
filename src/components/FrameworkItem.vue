@@ -27,13 +27,6 @@ export default {
 }
 </script>
 <style scoped>
-h3 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: #3D3D3D;
-  margin-bottom: 10px;
-}
 
 .framework-item {
   background-color: #FFFFFF;
@@ -44,20 +37,12 @@ h3 {
 
 .framework-item-info {
   padding: 24px 12px;
-  color: #3D3D3D;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.framework-item-info p {
-  color: #808080;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
 }
 
 .buttons {

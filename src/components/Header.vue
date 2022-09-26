@@ -18,6 +18,7 @@ export default {
 
 
 <style scoped>
+
 .header-container {
   height: 80px;
   background: #F8F9FA;
@@ -28,4 +29,5 @@ export default {
   margin: 0;
   padding: 0 120px
 }
+
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div class="connecting-container">
+  <div class="main-container connecting-container">
     <div class="meeting-block" v-for="item in items" :key="item.id">
       <img :src="item.img" alt=""/>
       <div class="description">
-        <div>
+        <div class="text">
           <h3> {{ item.title }}</h3>
           <p>{{ item.description }}</p>
         </div>
@@ -44,7 +44,6 @@ export default {
 <style scoped>
 .connecting-container {
   background: #FFFFFF;
-  padding: 0 120px;
   display: flex
 }
 
@@ -61,6 +60,30 @@ export default {
 
 button {
   padding: 10px 30px
+}
+
+@media screen and (max-width: 1400px) {
+  .connecting-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .meeting-block {
+    flex-direction: column;
+  }
+
+  .description {
+    align-items: center;
+    padding: 26px 0
+  }
+
+  .text {
+    text-align: center;
+    padding-bottom: 12px;
+  }
 }
 
 

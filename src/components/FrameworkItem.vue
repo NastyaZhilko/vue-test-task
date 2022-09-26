@@ -2,7 +2,7 @@
   <div class="framework-item">
     <img v-bind:src="framework.image" alt="app"/>
     <div class="framework-item-info">
-      <div>
+      <div class="framework-item-text">
         <h3> {{ framework.title }}</h3>
         <p>{{ framework.description }}</p>
       </div>
@@ -48,5 +48,35 @@ export default {
 .buttons {
   display: flex;
   gap: 25px
+}
+
+@media screen and (max-width: 1240px) {
+  .framework-item {
+    gap: 30px
+  }
+}
+
+@media screen and (max-width: 1035px) {
+  .framework-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .framework-item-info {
+    align-items: center;
+    max-width: 535px;
+    padding: 24px 0
+  }
+
+  .framework-item-text {
+    text-align: center;
+    padding-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  img {
+    width: 100%;
+  }
 }
 </style>

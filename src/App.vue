@@ -28,21 +28,4 @@ export default {
 
 </script>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
-
-p, h3 {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-  font-family: 'GothicA1-Regular', sans-serif;
-}
-
 </style>

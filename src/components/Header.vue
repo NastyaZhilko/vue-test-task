@@ -1,5 +1,5 @@
 <template>
-  <div class="header-container">
+  <div class="main-container header-container">
     <div><img alt="Vue logo" class="logo" src="@/assets/logo.svg"/></div>
     <div>
       <navigation/>
@@ -18,7 +18,6 @@ export default {
 
 
 <style scoped>
-
 .header-container {
   height: 80px;
   background: #F8F9FA;
@@ -27,7 +26,16 @@ export default {
   align-items: center;
   flex-wrap: nowrap;
   margin: 0;
-  padding: 0 120px
+/*  padding: 0 120px*/
 }
-
+/* @media screen and (max-width: 1143px) {
+   .header-container{
+     padding: 0 60px
+   }
+}
+@media screen and (max-width: 600px) {
+  .header-container{
+    padding: 0 30px
+  }
+}*/
 </style>

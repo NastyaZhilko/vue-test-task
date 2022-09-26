@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-us-container" id="contact">
+  <div class="main-container contact-container" id="contact">
     <common-dialog v-model:isShow="dialogIsVisible">
       <p class="dialog-message">Data sent successfully!</p>
     </common-dialog>
@@ -178,9 +178,9 @@ export default {
 
 <style scoped>
 
-.contact-us-container {
-  margin: 0;
-  padding: 45px 120px;
+.contact-container {
+  padding-bottom: 45px;
+  padding-top: 45px;
 }
 
 .title {
@@ -208,6 +208,17 @@ export default {
 
 .error {
   color: red
+}
+
+@media screen and (max-width: 960px) {
+  .inputs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 765px) {
+  .inputs {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 </style>

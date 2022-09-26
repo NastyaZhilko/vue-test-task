@@ -1,5 +1,5 @@
 <template>
-  <div class="frameworks-container" id="frameworks">
+  <div class="main-container frameworks-container" id="frameworks">
     <div class="title">
       <PageTitle :title="title"/>
     </div>
@@ -52,8 +52,8 @@ export default {
 <style scoped>
 .frameworks-container {
   background: #F5F7FA;
-  margin: 0;
-  padding: 45px 120px
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .frameworks-block {
@@ -71,4 +71,11 @@ export default {
   margin-bottom: 45px;
   text-align: center;
 }
+@media screen and (max-width: 1035px) {
+  .frameworks-block div:nth-child(even){
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 </style>

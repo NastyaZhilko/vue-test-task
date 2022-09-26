@@ -1,5 +1,5 @@
 <template>
-  <div class="applications-container" id="applications">
+  <div class="main-container applications-container" id="applications">
     <div class="title">
       <PageTitle :title="title"/>
     </div>
@@ -81,8 +81,8 @@ export default {
 
 .applications-container {
   background: #F5F7FA;
-  margin: 0;
-  padding: 45px 120px
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .title {
@@ -96,6 +96,13 @@ export default {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 45px
+}
+
+@media screen and (max-width: 765px) {
+  .applications-block {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="about-us-container" id="about">
-    <div class="about-us-description">
+  <div class="main-container about-container" id="about">
+    <div class="about-description">
       <PageTitle :title="title"/>
       <p>{{ description }}</p>
       <div class="buttons">
@@ -16,7 +16,7 @@
 import PageTitle from '@/components/shared/PageTitle.vue'
 
 export default {
-  components: { PageTitle},
+  components: {PageTitle},
   data() {
     return {
       title: 'About us',
@@ -29,27 +29,39 @@ export default {
 <style scoped>
 
 
-.about-us-container {
+.about-container {
   color: #FFFFFF;
   max-width: 100%;
   background-image: url("@/assets/bg-images/aboutUsBg.png");
   display: flex;
   justify-content: center;
-  gap: 40px;
   align-items: center;
-  margin: 0;
-  padding: 45px 120px
+  gap: 40px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
-.about-us-description {
+.about-description {
   display: flex;
   flex-direction: column;
   gap: 16px
 }
 
-.buttons {
-  display: flex;
-  gap: 25px
+@media screen and (max-width: 1240px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-description {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  img {
+    width: 100%;
+  }
 }
 
 </style>
